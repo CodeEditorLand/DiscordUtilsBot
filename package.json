@@ -1,35 +1,46 @@
 {
-  "name": "@biomejs/discord-utils-bot",
-  "version": "0.0.0",
-  "private": true,
-  "type": "module",
-  "license": "MIT OR Apache-2.0",
-  "scripts": {
-    "format": "biome format --write .",
-    "check": "biome check .",
-    "check:apply": "biome check --apply-unsafe .",
-    "typecheck": "tsc",
-    "deploy": "wrangler deploy",
-    "deploy-commands": "tsx --env-file=.env scripts/deploy-commands.ts",
-    "dev": "wrangler dev",
-    "start": "wrangler dev"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^1.6.0",
-    "@cloudflare/workers-types": "^4.20240222.0",
-    "tsx": "^4.7.1",
-    "typescript": "^5.4.2",
-    "wrangler": "^3.32.0"
-  },
-  "dependencies": {
-    "@discordjs/builders": "^1.7.0",
-    "@discordjs/rest": "^2.2.0",
-    "dedent": "^1.5.1",
-    "discord-api-types": "^0.37.73",
-    "discord-verify": "^1.2.0"
-  },
-  "engines": {
-    "node": "^20.11.0 || >=21.2.0"
-  },
-  "packageManager": "pnpm@8.15.4"
+	"name": "@biomejs/discord-utils-bot",
+	"version": "0.0.1",
+	"private": false,
+	"homepage": "https://github.com/CodeEditorLand/Foundation#readme",
+	"bugs": {
+		"url": "https://github.com/CodeEditorLand/Foundation/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/CodeEditorLand/Foundation.git"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "Playform",
+		"email": "Hello@Playform.Cloud",
+		"url": "https://playform.cloud"
+	},
+	"type": "module",
+	"scripts": {
+		"deploy": "wrangler deploy",
+		"deploy-commands": "tsx --env-file=.env scripts/deploy-commands.ts",
+		"dev": "wrangler dev",
+		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'",
+		"start": "wrangler dev"
+	},
+	"dependencies": {
+		"@discordjs/builders": "^1.7.0",
+		"@discordjs/rest": "^2.2.0",
+		"dedent": "^1.5.1",
+		"discord-api-types": "^0.37.75",
+		"discord-verify": "^1.2.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.6.1",
+		"@cloudflare/workers-types": "^4.20240314.0",
+		"tsx": "^4.7.1",
+		"typescript": "^5.4.2",
+		"typescript-esbuild": "latest",
+		"wrangler": "^3.35.0"
+	},
+	"packageManager": "pnpm@8.15.4",
+	"publishConfig": {
+		"access": "public"
+	}
 }
