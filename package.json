@@ -1,36 +1,49 @@
 {
-  "name": "@biomejs/discord-utils-bot",
-  "version": "0.0.0",
-  "private": true,
-  "type": "module",
-  "license": "MIT OR Apache-2.0",
-  "scripts": {
-    "dev": "wrangler dev",
-    "start": "wrangler dev",
-    "deploy": "wrangler deploy",
-    "deploy-commands": "tsx --env-file=.dev.vars scripts/deploy-commands.ts",
-    "check": "biome check .",
-    "check:apply": "biome check --apply-unsafe .",
-    "format": "biome format --write .",
-    "lint": "biome lint .",
-    "typecheck": "tsc"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^1.7.1",
-    "@cloudflare/workers-types": "^4.20240423.0",
-    "tsx": "^4.7.2",
-    "typescript": "^5.4.5",
-    "wrangler": "^3.52.0"
-  },
-  "dependencies": {
-    "@discordjs/builders": "^1.7.0",
-    "@discordjs/rest": "^2.2.0",
-    "dedent": "^1.5.3",
-    "discord-api-types": "^0.37.81",
-    "discord-verify": "^1.2.0"
-  },
-  "engines": {
-    "node": "^20.11.0 || >=21.2.0"
-  },
-  "packageManager": "pnpm@8.15.7"
+	"name": "@biomejs/discord-utils-bot",
+	"version": "0.0.1",
+	"private": false,
+	"keywords": [
+		"land"
+	],
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/DiscordUtilsBot#readme",
+	"bugs": {
+		"url": "HTTPS://GitHub.Com/CodeEditorLand/DiscordUtilsBot/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+HTTPS://github.com/CodeEditorLand/DiscordUtilsBot.git"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "🌆 — Land —",
+		"email": "Land@PlayForm.Cloud",
+		"url": "HTTPS://Land.PlayForm.Cloud"
+	},
+	"type": "module",
+	"scripts": {
+		"Document": "Document 'Source/**/*.ts'",
+		"deploy": "wrangler deploy",
+		"deploy-commands": "tsx --env-file=.dev.vars scripts/deploy-commands.ts",
+		"dev": "wrangler dev",
+		"prepublishOnly": "Build 'Source/**/*.ts'",
+		"start": "wrangler dev"
+	},
+	"dependencies": {
+		"@discordjs/builders": "^1.7.0",
+		"@discordjs/rest": "^2.2.0",
+		"dedent": "^1.5.3",
+		"discord-api-types": "^0.37.81",
+		"discord-verify": "^1.2.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.7.1",
+		"@cloudflare/workers-types": "^4.20240423.0",
+		"@playform/build": "0.0.7",
+		"@playform/document": "0.0.6",
+		"tsx": "^4.7.2",
+		"wrangler": "^3.52.0"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
 }
