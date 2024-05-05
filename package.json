@@ -2,44 +2,47 @@
 	"name": "@biomejs/discord-utils-bot",
 	"version": "0.0.1",
 	"private": false,
-	"homepage": "https://github.com/CodeEditorLand/Foundation#readme",
+	"keywords": [
+		"land"
+	],
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/DiscordUtilsBot#readme",
 	"bugs": {
-		"url": "https://github.com/CodeEditorLand/Foundation/issues"
+		"url": "HTTPS://GitHub.Com/CodeEditorLand/DiscordUtilsBot/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/CodeEditorLand/Foundation.git"
+		"url": "git+HTTPS://github.com/CodeEditorLand/DiscordUtilsBot.git"
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
-		"name": "Playform",
-		"email": "Hello@Playform.Cloud",
-		"url": "https://playform.cloud"
+		"name": "🌆 — Land —",
+		"email": "Land@PlayForm.Cloud",
+		"url": "HTTPS://Land.PlayForm.Cloud"
 	},
 	"type": "module",
 	"scripts": {
+		"Document": "Document 'Source/**/*.ts'",
 		"deploy": "wrangler deploy",
-		"deploy-commands": "tsx --env-file=.env scripts/deploy-commands.ts",
+		"deploy-commands": "tsx --env-file=.dev.vars scripts/deploy-commands.ts",
 		"dev": "wrangler dev",
-		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'",
+		"prepublishOnly": "Build 'Source/**/*.ts'",
 		"start": "wrangler dev"
 	},
 	"dependencies": {
-		"@discordjs/builders": "^1.7.0",
-		"@discordjs/rest": "^2.2.0",
-		"dedent": "^1.5.1",
-		"discord-api-types": "^0.37.75",
-		"discord-verify": "^1.2.0"
+		"@discordjs/builders": "1.7.0",
+		"@discordjs/rest": "2.2.0",
+		"dedent": "1.5.3",
+		"discord-api-types": "0.37.83",
+		"discord-verify": "1.2.0"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^1.6.1",
-		"@cloudflare/workers-types": "^4.20240314.0",
-		"tsx": "^4.7.1",
-		"typescript": "^5.4.2",
-		"typescript-esbuild": "0.4.5",
-		"wrangler": "^3.35.0"
+		"@biomejs/biome": "1.7.2",
+		"@cloudflare/workers-types": "4.20240423.0",
+		"@playform/build": "0.0.7",
+		"@playform/document": "0.0.6",
+		"tsx": "4.8.2",
+		"wrangler": "3.53.0"
 	},
-	"packageManager": "pnpm@8.15.4",
 	"publishConfig": {
 		"access": "public"
 	}
