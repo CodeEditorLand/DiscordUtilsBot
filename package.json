@@ -29,19 +29,19 @@
 		"start": "wrangler dev"
 	},
 	"dependencies": {
-		"@discordjs/builders": "1.7.0",
-		"@discordjs/rest": "2.2.0",
+		"@discordjs/builders": "1.8.1",
+		"@discordjs/rest": "2.3.0",
 		"dedent": "1.5.3",
 		"discord-api-types": "0.37.83",
 		"discord-verify": "1.2.0"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "1.7.2",
-		"@cloudflare/workers-types": "4.20240423.0",
+		"@biomejs/biome": "1.7.3",
+		"@cloudflare/workers-types": "4.20240502.0",
 		"@playform/build": "0.0.7",
 		"@playform/document": "0.0.6",
-		"tsx": "4.8.2",
-		"wrangler": "3.53.0"
+		"tsx": "4.9.3",
+		"wrangler": "3.53.1"
 	},
 	"publishConfig": {
 		"access": "public"
