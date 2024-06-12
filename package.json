@@ -17,6 +17,6 @@
 		"@biomejs/biome": "1.8.1",
 		"@cloudflare/workers-types": "4.20240605.0",
 		"tsx": "4.15.2",
-		"wrangler": "3.60.1"
+		"wrangler": "3.60.2"
 	}
 }
