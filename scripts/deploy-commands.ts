@@ -1,6 +1,6 @@
-import { readdir } from 'fs/promises';
-import { join } from 'path';
-import process from 'process';
+import { readdir } from 'node:fs/promises';
+import { join } from 'node:path';
+import process from 'node:process';
 import type { ContextMenuCommandBuilder, SlashCommandBuilder } from '@discordjs/builders';
 import { REST } from '@discordjs/rest';
 import {
