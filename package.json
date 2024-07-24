@@ -7,15 +7,15 @@
 		"start": "wrangler dev"
 	},
 	"dependencies": {
-		"@discordjs/builders": "^1.8.2",
-		"@discordjs/rest": "^2.3.0",
+		"@discordjs/builders": "^1.9.0-dev.1721607096-b2970bb2d",
+		"@discordjs/rest": "^2.4.0-dev.1721607096-b2970bb2d",
 		"dedent": "^1.5.3",
-		"discord-api-types": "^0.37.92",
+		"discord-api-types": "^0.37.93",
 		"discord-verify": "^1.2.0"
 	},
 	"devDependencies": {
-		"@cloudflare/workers-types": "^4.20240718.0",
+		"@cloudflare/workers-types": "^4.20240722.0",
 		"tsx": "^4.16.2",
-		"wrangler": "^3.65.1"
+		"wrangler": "^3.66.0"
 	}
 }
