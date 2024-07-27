@@ -1,21 +1,23 @@
 import type {
-  APICommandAutocompleteInteractionResponseCallbackData,
-  APIInteractionResponseCallbackData,
-  InteractionResponseType,
-} from 'discord-api-types/v10';
+	APICommandAutocompleteInteractionResponseCallbackData,
+	APIInteractionResponseCallbackData,
+	InteractionResponseType,
+} from "discord-api-types/v10";
 
 function respond(value: unknown) {
-  const json = JSON.stringify(value);
-  return new Response(json, {
-    headers: {
-      'content-type': 'application/json;charset=UTF-8',
-    },
-  });
+	const json = JSON.stringify(value);
+	return new Response(json, {
+		headers: {
+			"content-type": "application/json;charset=UTF-8",
+		},
+	});
 }
 
 export function reply(
-  type: InteractionResponseType,
-  data?: APIInteractionResponseCallbackData | APICommandAutocompleteInteractionResponseCallbackData,
+	type: InteractionResponseType,
+	data?:
+		| APIInteractionResponseCallbackData
+		| APICommandAutocompleteInteractionResponseCallbackData,
 ) {
-  return respond({ type, data });
+	return respond({ type, data });
 }
