@@ -85,11 +85,13 @@ text in the builder.
 Then, import the command in `src/commands/index.ts` and add it to the switch
 statement in the handleInteraction function.
 
-Remember to run `node --run deploy-commands` after adding a new command, to update the command list on Discord.
+Remember to run `node --run deploy-commands` after adding a new command, to
+update the command list on Discord.
 
 ## Submitting Changes
 
-When you're ready to submit your changes, make sure to run `node --run check` and `node --run typecheck` to ensure everything is in order.
+When you're ready to submit your changes, make sure to run `node --run check`
+and `node --run typecheck` to ensure everything is in order.
 
 Then, create a
 [pull request](https://github.com/biomejs/discord-utils-bot/pulls).
