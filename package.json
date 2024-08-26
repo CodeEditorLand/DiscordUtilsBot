@@ -1,9 +1,9 @@
 {
 	"dependencies": {
-		"@discordjs/builders": "2.0.0-dev.1690416616-8f4256d.0",
-		"@discordjs/rest": "2.4.0-dev.1724544745-437437461",
+		"@discordjs/builders": "1.8.2",
+		"@discordjs/rest": "2.3.0",
 		"dedent": "1.5.3",
-		"discord-api-types": "0.37.98-next.f019f0f.1724404177",
+		"discord-api-types": "0.37.97",
 		"discord-verify": "1.2.0"
 	},
 	"devDependencies": {
