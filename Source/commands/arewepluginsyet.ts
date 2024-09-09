@@ -1,16 +1,11 @@
-import { SlashCommandBuilder } from "@discordjs/builders";
-import dedent from "dedent";
-import {
-	type APIApplicationCommandInteraction,
-	InteractionResponseType,
-} from "discord-api-types/v10";
-import { reply } from "../reply.js";
+import { SlashCommandBuilder } from '@discordjs/builders';
+import dedent from 'dedent';
+import { type APIApplicationCommandInteraction, InteractionResponseType } from 'discord-api-types/v10';
+import { reply } from '../reply.js';
 
-export async function onPluginsSlashCommand(
-	interaction: APIApplicationCommandInteraction,
-) {
-	return reply(InteractionResponseType.ChannelMessageWithSource, {
-		content: dedent`
+export async function onPluginsSlashCommand(interaction: APIApplicationCommandInteraction) {
+  return reply(InteractionResponseType.ChannelMessageWithSource, {
+    content: dedent`
     ⚠️ **In roadmap**
     There is no support for plugins yet, but it is planned for the future.
 
@@ -26,9 +21,9 @@ export async function onPluginsSlashCommand(
 
     Specifically, we want to explore these use cases through a combination of [GritQL](<https://docs.grit.io/tutorials/gritql>) plugins and/or JS/TS plugins.
     `,
-	});
+  });
 }
 
 export const slashCommandData = new SlashCommandBuilder()
-	.setName("arewepluginsyet")
-	.setDescription("Does Biome support plugins yet?");
+  .setName('arewepluginsyet')
+  .setDescription('Does Biome support plugins yet?');
