@@ -2,13 +2,13 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "timezone": "Europe/Gibraltar",
   "schedule": ["before 9am on monday"],
-  "extends": ["customManagers:biomeVersions", "helpers:pinGitHubActionDigestsToSemver"],
+  "extends": ["config:recommended", "customManagers:biomeVersions", "helpers:pinGitHubActionDigestsToSemver"],
   "rangeStrategy": "replace",
   "packageRules": [
     {
       "groupName": "all non-major dependencies",
       "groupSlug": "all-minor-patch",
-      "matchPackageNames": ["!node"],
+      "matchDepTypes": ["!engines"],
       "matchUpdateTypes": ["minor", "patch", "lockFileMaintenance"]
     }
   ]
