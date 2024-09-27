@@ -1,4 +1,10 @@
 {
+	"name": "@biomejs/discord-utils-bot",
+	"scripts": {
+		"deploy-commands": "tsx --env-file=.dev.vars scripts/deploy-commands.ts",
+		"dev": "wrangler dev",
+		"start": "wrangler dev"
+	},
 	"dependencies": {
 		"@discordjs/builders": "1.9.0",
 		"@discordjs/rest": "2.4.0",
@@ -10,11 +16,5 @@
 		"@cloudflare/workers-types": "4.20240925.0",
 		"tsx": "4.19.1",
 		"wrangler": "3.78.10"
-	},
-	"name": "@biomejs/discord-utils-bot",
-	"scripts": {
-		"deploy-commands": "tsx --env-file=.dev.vars scripts/deploy-commands.ts",
-		"dev": "wrangler dev",
-		"start": "wrangler dev"
 	}
 }
