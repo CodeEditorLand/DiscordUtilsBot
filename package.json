@@ -1,15 +1,15 @@
 {
 	"dependencies": {
-		"@discordjs/builders": "^1.9.0",
-		"@discordjs/rest": "^2.4.0",
-		"dedent": "^1.5.3",
-		"discord-api-types": "^0.37.101",
-		"discord-verify": "^1.2.0"
+		"@discordjs/builders": "1.9.0",
+		"@discordjs/rest": "2.4.0",
+		"dedent": "1.5.3",
+		"discord-api-types": "0.37.101",
+		"discord-verify": "1.2.0"
 	},
 	"devDependencies": {
-		"@cloudflare/workers-types": "^4.20240925.0",
-		"tsx": "^4.19.1",
-		"wrangler": "^3.78.12"
+		"@cloudflare/workers-types": "4.20240925.0",
+		"tsx": "4.19.1",
+		"wrangler": "3.78.12"
 	},
 	"name": "@biomejs/discord-utils-bot",
 	"scripts": {
