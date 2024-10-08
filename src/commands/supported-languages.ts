@@ -1,17 +1,11 @@
-import { SlashCommandBuilder } from "@discordjs/builders";
-import dedent from "dedent";
-import {
-	InteractionResponseType,
-	type APIApplicationCommandInteraction,
-} from "discord-api-types/v10";
+import { SlashCommandBuilder } from '@discordjs/builders';
+import dedent from 'dedent';
+import { type APIApplicationCommandInteraction, InteractionResponseType } from 'discord-api-types/v10';
+import { reply } from '../reply.js';
 
-import { reply } from "../reply.js";
-
-export async function onSupportedLanguagesSlashCommand(
-	interaction: APIApplicationCommandInteraction,
-) {
-	return reply(InteractionResponseType.ChannelMessageWithSource, {
-		content: dedent`
+export async function onSupportedLanguagesSlashCommand(interaction: APIApplicationCommandInteraction) {
+  return reply(InteractionResponseType.ChannelMessageWithSource, {
+    content: dedent`
     ### ✅ Full Support
     JavaScript, TypeScript, JSX, JSON, JSONC, CSS, GraphQL
     ### ⚠️ Partial Support
@@ -25,9 +19,9 @@ export async function onSupportedLanguagesSlashCommand(
 
     For more info check <https://biomejs.dev/internals/language-support>
     `,
-	});
+  });
 }
 
 export const slashCommandData = new SlashCommandBuilder()
-	.setName("supported-languages")
-	.setDescription("See the status of Biome's language support");
+  .setName('supported-languages')
+  .setDescription("See the status of Biome's language support");

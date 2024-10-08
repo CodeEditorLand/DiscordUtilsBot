@@ -1,17 +1,11 @@
-import { SlashCommandBuilder } from "@discordjs/builders";
-import dedent from "dedent";
-import {
-	InteractionResponseType,
-	type APIApplicationCommandInteraction,
-} from "discord-api-types/v10";
+import { SlashCommandBuilder } from '@discordjs/builders';
+import dedent from 'dedent';
+import { type APIApplicationCommandInteraction, InteractionResponseType } from 'discord-api-types/v10';
+import { reply } from '../reply';
 
-import { reply } from "../reply";
-
-export async function onReproductionSlashCommand(
-	interaction: APIApplicationCommandInteraction,
-) {
-	return reply(InteractionResponseType.ChannelMessageWithSource, {
-		content: dedent`
+export async function onReproductionSlashCommand(interaction: APIApplicationCommandInteraction) {
+  return reply(InteractionResponseType.ChannelMessageWithSource, {
+    content: dedent`
     🙏 **Please provide a minimal reproduction**
 
     If possible, please provide a link to a minimal reproduction of your issue. You can either use our playground or create a minimal reproduction repository.
@@ -27,9 +21,9 @@ export async function onReproductionSlashCommand(
 
     A good minimal reproduction is a simplified version of your issue that includes only the necessary code or steps to reproduce the problem. It removes any unrelated features or complexity, focusing solely on the core issue. This makes it easier for us to quickly identify and fix the problem without unnecessary distractions.
     `,
-	});
+  });
 }
 
 export const slashCommandData = new SlashCommandBuilder()
-	.setName("reproduction")
-	.setDescription("Ask for a minimal reproduction");
+  .setName('reproduction')
+  .setDescription('Ask for a minimal reproduction');
