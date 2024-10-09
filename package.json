@@ -18,8 +18,8 @@
     "@biomejs/biome": "^1.9.3",
     "@cloudflare/workers-types": "^4.20241004.0",
     "tsx": "^4.19.1",
-    "typescript": "^5.6.2",
-    "wrangler": "^3.80.1"
+    "typescript": "^5.6.3",
+    "wrangler": "^3.80.2"
   },
   "dependencies": {
     "@discordjs/builders": "^1.9.0",
