@@ -1,19 +1,4 @@
 {
-	"name": "@biomejs/discord-utils-bot",
-	"version": "0.0.0",
-	"private": true,
-	"license": "MIT OR Apache-2.0",
-	"type": "module",
-	"scripts": {
-		"check": "biome check",
-		"check:apply": "biome check --fix --unsafe",
-		"deploy-commands": "tsx --env-file=.dev.vars scripts/deploy-commands.ts",
-		"dev": "wrangler dev",
-		"format": "biome format --write",
-		"lint": "biome lint",
-		"start": "wrangler dev",
-		"typecheck": "tsc"
-	},
 	"dependencies": {
 		"@discordjs/builders": "^1.9.0",
 		"@discordjs/rest": "^2.4.0",
@@ -22,14 +7,14 @@
 		"discord-verify": "^1.2.0"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^1.9.3",
 		"@cloudflare/workers-types": "^4.20241004.0",
 		"tsx": "^4.19.1",
-		"typescript": "^5.6.3",
 		"wrangler": "^3.80.2"
 	},
-	"packageManager": "pnpm@9.12.1",
-	"engines": {
-		"node": ">=22.0.0"
+	"name": "@biomejs/discord-utils-bot",
+	"scripts": {
+		"deploy-commands": "tsx --env-file=.dev.vars scripts/deploy-commands.ts",
+		"dev": "wrangler dev",
+		"start": "wrangler dev"
 	}
 }
