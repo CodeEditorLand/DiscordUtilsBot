@@ -9,6 +9,7 @@ export async function handleGitHubWebhook(
 	}
 
 	const githubSecret = env.WEBHOOK_SECRET;
+
 	const webhookUrl = env.DISCORD_WEBHOOK;
 
 	if (!githubSecret || !webhookUrl) {
@@ -32,6 +33,7 @@ export async function handleGitHubWebhook(
 	}
 
 	let json: unknown;
+
 	try {
 		json = JSON.parse(bodyText);
 	} catch {
@@ -69,6 +71,7 @@ async function isAuthorized(
 	const encoder = new TextEncoder();
 
 	const data = encoder.encode(bodyText);
+
 	const secret = encoder.encode(githubSecret);
 
 	const key = await crypto.subtle.importKey(
@@ -78,6 +81,7 @@ async function isAuthorized(
 		false,
 		["sign"],
 	);
+
 	const signature = await crypto.subtle.sign("HMAC", key, data);
 
 	const hexSignature = Array.from(new Uint8Array(signature))
@@ -85,6 +89,7 @@ async function isAuthorized(
 		.join("");
 
 	const trusted = encoder.encode(`sha256=${hexSignature}`);
+
 	const untrusted = encoder.encode(untrustedSignature);
 
 	return crypto.subtle.timingSafeEqual(trusted, untrusted);

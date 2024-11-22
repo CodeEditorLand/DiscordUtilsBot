@@ -6,6 +6,7 @@ import type {
 
 function respond(value: unknown) {
 	const json = JSON.stringify(value);
+
 	return new Response(json, {
 		headers: {
 			"content-type": "application/json;charset=UTF-8",

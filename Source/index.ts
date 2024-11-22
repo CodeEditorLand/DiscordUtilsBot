@@ -39,6 +39,7 @@ export default {
 		switch (url.pathname) {
 			case "/github":
 				return handleGitHubWebhook(request, env);
+
 			default:
 				return handleInteraction(request, env);
 		}
@@ -61,6 +62,7 @@ async function handleInteraction(
 		env.PUBLIC_KEY,
 		PlatformAlgorithm.Cloudflare,
 	).catch(() => false);
+
 	if (!isValid) {
 		return new Response("Invalid signature", { status: 401 });
 	}
@@ -75,12 +77,16 @@ async function handleInteraction(
 		switch (interaction.data.name) {
 			case "arewepluginsyet":
 				return onPluginsSlashCommand(interaction);
+
 			case "lint-rule":
 				return onLintRuleSlashCommand(interaction);
+
 			case "reproduction":
 				return onReproductionSlashCommand(interaction);
+
 			case "supported-languages":
 				return onSupportedLanguagesSlashCommand(interaction);
+
 			case "test":
 				return onTestSlashCommand(interaction);
 		}

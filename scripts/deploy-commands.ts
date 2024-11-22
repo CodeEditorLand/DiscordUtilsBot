@@ -23,6 +23,7 @@ interface CommandFile {
 }
 
 const files = glob(join(import.meta.dirname, "../src/commands/*.ts"));
+
 const commands = await Array.fromAsync(files, async (file) => {
 	const loadedFile = (await import(`file:${file}`)) as CommandFile;
 

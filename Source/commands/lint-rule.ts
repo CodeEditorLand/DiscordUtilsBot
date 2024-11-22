@@ -16,6 +16,7 @@ interface Rule {
 	recommended: boolean;
 	deprecated: boolean;
 	fixKind?: "safe" | "unsafe";
+
 	docs: string;
 }
 
@@ -44,6 +45,7 @@ export async function onLintRuleSlashCommand(
 	const { lints } = (await fetch(
 		"https://biomejs.dev/metadata/rules.json",
 	).then((res) => res.json())) as RulesMetadata;
+
 	const ruleData = Object.values(lints.languages)
 		.flatMap((language) => Object.values(language))
 		.flatMap((category) => Object.values(category))
@@ -60,6 +62,7 @@ export async function onLintRuleSlashCommand(
 		ruleData.version === "next"
 			? "unreleased"
 			: `since \`v${ruleData.version}\``;
+
 	return reply(InteractionResponseType.ChannelMessageWithSource, {
 		content: dedent`
       ## ${ruleData.name} (${release})
@@ -87,6 +90,7 @@ export async function onLintRuleAutocomplete(
 	const { lints } = (await fetch(
 		"https://biomejs.dev/metadata/rules.json",
 	).then((res) => res.json())) as RulesMetadata;
+
 	const rules = Object.values(lints.languages)
 		.flatMap((language) => Object.values(language))
 		.flatMap((category) => Object.values(category))
