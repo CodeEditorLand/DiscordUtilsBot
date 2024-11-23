@@ -5,9 +5,11 @@ import {
 	type APIApplicationCommandInteraction,
 } from "discord-api-types/v10";
 
-export async function onPluginsSlashCommand(interaction: APIApplicationCommandInteraction) {
-  return reply(InteractionResponseType.ChannelMessageWithSource, {
-    content: dedent`
+export async function onPluginsSlashCommand(
+	interaction: APIApplicationCommandInteraction,
+) {
+	return reply(InteractionResponseType.ChannelMessageWithSource, {
+		content: dedent`
     🚨 **Plugins are coming to Biome 2.0** 🚨
 
     See the umbrella issue: <https://github.com/biomejs/biome/issues/2463>
