@@ -23,7 +23,9 @@ import {
 
 export type Env = {
 	PUBLIC_KEY: string;
+
 	DISCORD_WEBHOOK: string;
+
 	WEBHOOK_SECRET: string;
 };
 

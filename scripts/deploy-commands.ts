@@ -12,6 +12,7 @@ if (!process.env.DISCORD_TOKEN || !process.env.APPLICATION_ID) {
 	console.error(
 		"Missing DISCORD_TOKEN or APPLICATION_ID environment variables",
 	);
+
 	process.exit(1);
 }
 
@@ -19,6 +20,7 @@ console.log("Deploying commands...");
 
 interface CommandFile {
 	contextMenuCommandData: ContextMenuCommandBuilder;
+
 	slashCommandData: SlashCommandBuilder;
 }
 

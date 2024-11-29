@@ -11,10 +11,15 @@ import { reply } from "../reply.js";
 
 interface Rule {
 	name: string;
+
 	version: string;
+
 	link: string;
+
 	recommended: boolean;
+
 	deprecated: boolean;
+
 	fixKind?: "safe" | "unsafe";
 
 	docs: string;
@@ -99,9 +104,11 @@ export async function onLintRuleAutocomplete(
 			if (a.name < b.name) {
 				return -1;
 			}
+
 			if (a.name > b.name) {
 				return 1;
 			}
+
 			return 0;
 		})
 		.slice(0, 25);
